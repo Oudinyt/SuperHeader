@@ -1,0 +1,741 @@
+/*********************************************************************
+	Heade@r
+*********************************************************************/
+
+// Import
+@import '../common/variables';
+@import '../common/breakpoints';
+
+// Var
+
+$HeaderTop-height: 60px;
+$HeaderBottom-height: 50px;
+
+
+/************************************************************************************************
+	Phone
+************************************************************************************************/
+
+@include mq('phone') {
+
+
+  body{
+    padding-top: ($HeaderTop-height + $HeaderBottom-height + 40px);
+  }
+
+  .#{$prefix} {
+
+    &Header {
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top:0;
+      width:100%;
+
+
+      /////////////////////////////////// Header Top
+      &__top{
+        display: flex;
+        flex-wrap: wrap;
+        background: $color-white;
+        font-family: $font-family-sans-serif;
+        transition: all 0.3s ease;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+        position: relative;
+        z-index: 2;
+      }
+
+      &__Link-Axa-content{
+        order: 1;
+        transition: all 0.3s ease;
+        flex-basis: 50%;
+        position: relative;
+
+      }
+
+      // Logo AXA
+      &__Link-Axa {
+        box-sizing: border-box;
+        display: flex;
+        padding: 15px 0 10px 15px;
+        font-size: 0;
+        z-index: 1;
+        height:$HeaderTop-height;
+      }
+
+      &__Link-Axa-img {
+        height:35px;
+        border: 0;
+      }
+
+      &__Link-Xl-content{
+        order: 2;
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1;
+      }
+
+      // Logo xl group
+      &__Link-Xl {
+        box-sizing: border-box;
+        padding: 15px 15px 15px 0 ;
+        transition: all 0.3s ease;
+        height:$HeaderTop-height;
+      }
+
+      &__Link-Xl-img {
+        //height: 15px;
+        border: 0;
+      }
+
+      &__Nav{
+        order: 3;
+        display: flex;
+        flex-basis: 100%;
+        background: $color-white;
+        //border-bottom: 1px solid $color-wild-sand;
+
+      }
+
+
+      // Main nav
+      ////////////////////////////////////////////////////////////////////s
+
+      &__MainNav {
+        flex-basis: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__MainNav-input{
+        display: none;
+      }
+
+      &__MainNav-label{}
+
+      &__MainNav-Nav{
+        margin-top: ($HeaderTop-height + $HeaderBottom-height);
+      }
+
+      &__MainNav-lists{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      &__MainNav-list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      &__MainNav-input + &__MainNav-label {
+        position: relative;
+        display: block;
+        height: 20px;
+        width: 20px;
+        z-index: 5;
+        cursor: pointer;
+        span {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          top: 50%;
+          margin-top: -1px;
+          left: 0;
+          display: block;
+          background: $color-axa-blue;
+          transition: .3s;
+        }
+        span:first-child {
+          top: 2px;
+        }
+        span:last-child {
+          top: 18px;
+        }
+      }
+
+      &__MainNav-label:hover {
+        cursor: pointer;
+      }
+
+      &__MainNav-input:checked + &__MainNav-label {
+        span {
+          opacity: 0;
+          top: 50%;
+        }
+        span:first-child {
+          opacity: 1;
+          transform: rotate(405deg);
+        }
+        span:last-child {
+          opacity: 1;
+          transform: rotate(-405deg);
+        }
+      }
+
+      &__MainNav-input ~ &__MainNav-Nav {
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        transition: opacity .3s;
+        transition-delay: .3s;
+        overflow: hidden;
+        z-index: 0;
+      }
+
+      &__MainNav-lists {
+
+      }
+      &__MainNav-list {
+        opacity: 0;
+        transition: opacity .3s;
+        transition-delay: 0s;
+        border-bottom:1px solid $color-mercury ;
+        &:hover,
+        &--active{
+          a {
+            border-right: 3px solid $color-burnt-sienna;
+          }
+        }
+        &:first-child{
+          border-top:1px solid $color-mercury ;
+        }
+
+      }
+      &__MainNav-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-axa-blue;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: sans-serif;
+        display: block;
+        padding: 10px 15px;
+      }
+
+
+      &__MainNav-input:checked ~ &__MainNav-Nav {
+        height: 100%;
+        transition-delay: 0s;
+        > ul {
+          > li {
+            opacity: 1;
+            transition-delay: .3s;
+          }
+        }
+      }
+
+
+      // Nav functionnal
+      ////////////////////////////////////////////////////////////////////s
+
+      &__Nav-Fuctionnal {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //flex-basis: calc( 100% - 65px);
+        height: $HeaderBottom-height;
+        width: 100%;
+      }
+
+      &__Nav-Fuctionnal-lists {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        //flex-basis: 100%;
+        //
+        //justify-content: center;
+        //align-items: center;
+        //width: 100%;
+        height:100%;
+      }
+
+      &__Nav-Fuctionnal-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        flex: 1 1 auto;
+        position: relative;
+        //width: 100%;
+        //height:100%;
+        //flex-basis: 100%;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+        &:hover{
+          .AxaXl-Header__popover-functional{
+            display: block;
+            opacity: 1;
+          }
+        }
+      }
+
+      &__popover-functional{
+        display: none;
+        position: fixed;
+        opacity: 0;
+        transition: .3s;
+        background: white;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.10);
+        padding: 15px;
+        //border-left:1px solid $color-silver;
+        //border-right:1px solid $color-silver;
+        //border-bottom:1px solid $color-silver;
+        width: 100%;
+        left:0;
+        //min-height: 50px;
+
+        a{
+          text-decoration: none;
+          font-size: 14px;
+          color: $color-axa-blue;
+          font-weight: $font-weight-semi-bold;
+        }
+      }
+
+
+
+
+      &__Nav-Fuctionnal-link {
+        text-decoration: none;
+        font-size: 14px;
+        color: $color-axa-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        //height:calc(100% - 3px);
+        height:100%;
+        box-sizing: border-box;
+        border-bottom: 3px solid white;
+        &:hover,
+        &--active{
+          border-bottom: 3px solid $color-burnt-sienna;
+        }
+
+      }
+
+      &__Nav-Fuctionnal-icon{
+        position: relative;
+        display: block;
+      }
+
+      &__Nav-Fuctionnal-count{
+        position: absolute;
+        left:-10px;
+        top:-10px;
+        width:16px;
+        height:16px;
+        background:red;
+        border:2px solid white;
+        font-size: 12px;
+        line-height: 12px;
+        color:white;
+        font-weight: bold;
+        border-radius:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+
+      }
+
+      &__Nav-Fuctionnal-text{
+        display: none;
+      }
+
+      &__Nav-Fuctionnal-imgArrow{
+        display: none;
+      }
+
+
+      // Sub nav
+      &__SubNav{
+        position: relative;
+        z-index: 1;
+        background: $color-alabaster;
+        order: 5;
+        flex-basis: 100%;
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__Link-app {
+        color : $color-dusty-gray;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: $font-weight-semi-bold;
+        font-family: $font-family-sans-serif;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+
+        img{
+          margin-right: 5px;
+        }
+      }
+
+      &__Env {
+        font-family: $font-family-sans-serif;
+        color : $color-dusty-gray;
+        text-transform: uppercase;
+        font-weight: $font-weight-semi-bold;
+        font-size: 13px;
+
+      }
+
+    }
+  }
+}
+
+/************************************************************************************************
+	Tablet
+************************************************************************************************/
+
+@include mq('tablet') {
+
+  $HeaderTop-height: 65px;
+  $HeaderBottom-height: 50px;
+
+  body{	padding-top: ($HeaderTop-height + 37px);}
+
+  .#{$prefix} {
+
+    &Header{
+
+      // Header top
+      &__top{
+        display: flex;
+        flex-wrap: unset;
+      }
+
+      // Logo AXA
+
+      &__Link-Axa-content{
+        order : 1;
+        flex-basis: 50px;
+      }
+
+      &__Link-Axa{
+        padding: 15px 0 10px 15px;
+        height:$HeaderTop-height;
+      }
+
+      // Logo xl group
+
+      &__Link-Xl-content{
+        order: 3;
+        flex-basis: 170px;
+      }
+
+      &__Link-Xl {
+
+      }
+
+      // Logo Xl
+
+      &__Link-Xl-img{
+        border-left:1px solid $color-silver;
+        padding-left: 20px;
+      }
+
+
+      // Nav
+      &__Nav{
+        order: 2;
+        display: flex;
+        width: calc(100% - 220px);
+        flex-basis: calc(100% - 220px);
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__Nav-Fuctionnal{
+        width: auto;
+        height:100%;
+      }
+      // Main nav
+      &__MainNav{
+        flex-basis: auto;
+        margin-left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__MainNav-input,
+      &__MainNav-label{
+        display: none;
+      }
+
+      &__MainNav-Nav{
+        margin-top: $HeaderTop-height;
+      }
+
+
+      //Nav functionnal
+      &__Nav-Fuctionnal {
+        //flex-basis: auto;
+        //align-items: center;
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+        //height:100%;
+      }
+
+      &__Nav-Fuctionnal-lists {
+        //margin: 0;
+      //  //padding: 0;
+      //  display: block;
+      //  justify-content: center;
+      //  align-items: center;
+      //  display: flex;
+      }
+
+      &__Nav-Fuctionnal-list {
+        ////margin: 0;
+        ////padding: 0;
+        //list-style: none;
+        margin-right: 15px;
+        margin-left: 15px;
+        ////padding-right: 15px;
+        //display: flex;
+        //width: 17px;
+        //height: auto;
+        ////box-sizing: border-box;
+      }
+
+      &__Nav-Fuctionnal-link {
+        text-decoration: none;
+        font-size: 14px;
+        color: $color-axa-blue;
+        display: flex;
+        align-items: center;
+        &:hover,
+        &--active{
+          border-bottom: 3px solid white;
+        }
+      }
+
+      &__Nav-Fuctionnal-icon,
+      &__Nav-Fuctionnal-imgArrow {
+        //margin-right: 10px;
+        //margin-left: 10px;
+        max-height: fit-content;
+      }
+
+      // Sub nav
+      &__SubNav{
+        order: 5;
+      }
+
+    }
+  }
+}
+
+
+/************************************************************************************************
+	Desktop
+************************************************************************************************/
+
+@include mq('desktop') {
+
+
+
+  $HeaderTop-height: auto;
+  $HeaderBottom-height: auto;
+
+  body {
+    padding-top: 0;
+  }
+
+  .#{$prefix} {
+
+    &Header {
+      position: static;
+      // Logo AXA
+      ////////////////////////////////////////////////////////////////////////////////////
+      &__Link-Axa {
+        height: auto;
+        padding: 15px 0 15px 15px;
+        img{
+          height: auto;
+
+        }
+      }
+
+      // Logo Xl
+      ////////////////////////////////////////////////////////////////////////////////////
+      &__Link-Xl{
+        height: auto;
+        img{
+          height: auto;
+
+        }
+      }
+
+
+      // Main Nav
+      ////////////////////////////////////////////////////////////////////////////////////
+
+
+      &__MainNav{
+        height: 100%;
+      }
+
+      .AxaXl-Header__MainNav-input + .AxaXl-Header__MainNav-label,
+      &__MainNav-label {
+        display: none;
+      }
+
+      .AxaXl-Header__MainNav-input ~ .AxaXl-Header__MainNav-Nav,
+      &__MainNav-Nav {
+        display: block;
+        position: static;
+        overflow: visible;
+        z-index: 1000;
+        margin-top: 0;
+        transition: none;
+        transition-delay: 0;
+        height: 100%;
+      }
+
+      &__MainNav-lists {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      &__MainNav-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        opacity: 1;
+        border:0 none;
+        height: 100%;
+        &:hover,
+        &--active{
+          a{
+            border-bottom: 3px solid $color-burnt-sienna;
+            border-right:0;
+          }
+
+        }
+        &:first-child{
+          border-top: 0;
+        }
+      }
+
+      &__MainNav-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 3px solid white;
+        //height: calc(100% - 3px);
+        height:100%;
+        box-sizing: border-box;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+      }
+
+      // Functional Nav
+      ////////////////////////////////////////////////////////////////////////////////////
+      &__Nav-Fuctionnal-list{
+        width: auto;
+        flex-basis: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        &--active,
+        &:hover{
+          a{
+            border-bottom: 3px solid white;
+          }
+        }
+      }
+
+      &__Nav-Fuctionnal-icon{
+        display: flex;
+      }
+
+      &__Nav-Fuctionnal-count{
+        left:-10px;
+      }
+
+      &__Nav-Fuctionnal-text{
+        display: block;
+        margin: 0 10px;
+      }
+
+      &__Nav-Fuctionnal-imgArrow{
+        display: block;
+        margin-right: 0;
+      }
+
+      &__Nav-Fuctionnal-icon{
+        margin-left: 0 ;
+      }
+
+      &__popover-functional{
+        position: absolute;
+        left:0;
+        bottom:auto;
+        min-width: 150px;
+      }
+
+    }
+
+
+
+  }
+
+}
+
+
+/************************************************************************************************
+	All
+************************************************************************************************/
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.#{$prefix} {
+
+  &fixedTop{
+    position: fixed;
+    top:0;
+    width: 100%;
+  }
+
+  &headertopHidden{
+    height:0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+  }
+
+
+}

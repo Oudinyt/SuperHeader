@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Publico Headline;
+    src: url('#{$publico-font-path}/PublicoHeadline-Bold.eot');
+    src: url('#{$publico-font-path}/PublicoHeadline-Bold.eot?#iefix') format("embedded-opentype"), url('#{$publico-font-path}/PublicoHeadline-Bold.woff') format("woff"), url('#{$publico-font-path}/PublicoHeadline-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal
+}

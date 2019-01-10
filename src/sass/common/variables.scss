@@ -1,0 +1,61 @@
+$prefix: AxaXl-;
+
+/* Shadow */
+
+$header-shadow : 0 1px 3px 0 rgba(0,0,0,0.20);
+
+/* Font */
+$font-family-sans-serif: 'Source Sans Pro', Arial, sans-serif;
+$font-family-serif: 'PT Serif', serif;
+
+$path-component:"../components/";
+$icomoon-font-path: "#{$path-component}font-icon/fonts";
+$publico-font-path: "../../fonts/Publico-Headline/fonts";
+
+
+// Font Weight
+$font-weight-light: 200;
+
+$font-weight-regular: 400;
+$font-weight-normal: $font-weight-regular;
+
+$font-weight-semi-bold: 600;
+
+$font-weight-bold: 800;
+
+
+/* Color */
+$color-axa-blue: #00008f;
+$color-axa-red: #c91432;
+$color-deep-sapphire: #00005b;
+$color-st-tropaz: #2425aa;
+$color-azure: #3032c1;
+$color-dark-indigo: #3b3fd8;
+$color-indigo: #494df4;
+$color-flamingo: #ec4d33;
+$color-burnt-sienna: #f07662;
+$color-mineshaft: #333333;
+$color-scorpion: #5f5f5f;
+$color-gray: #7f7f7f;
+$color-dusty-gray: #999999;
+$color-silver: #cccccc;
+$color-mercury: #e5e5e5;
+$color-wild-sand: #f5f5f5;
+$color-alabaster: #fafafa;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-periwinkle: #c9d8ff;
+$color-iceberg: #d4eef5;
+$color-outer-space: #343c3f;
+$color-teal-blue: #064360;
+$color-venice-blue: #075d86;
+$color-crimson: #c91432;
+$color-amaranth: #f02849;
+$color-amber: #ffbf00;
+$color-bright-sun: #ffd33b;
+$color-mountain-meadow: #1c9a67;
+$color-jungle-green: #2ab27b;
+$color-fountain-blue: #57c3c3;
+$color-monte-carlo: #7ed2d2;
+$color-dark-orchild: #bc30c1;
+$color-nero: #1a1a1a;
