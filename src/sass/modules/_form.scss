@@ -1,0 +1,110 @@
+/*********************************************************************
+	Form element
+*********************************************************************/
+
+.#{$prefix} {
+	
+	
+	// Group Element
+	&form-group{
+		display: flex;
+		flex: 0 0 auto;
+		flex-flow: row wrap;
+		align-items: center;
+		margin-bottom: $grid-gutter-width / 2;
+	}
+	
+	// Label
+	&form-label{
+		display: inline-block;
+		margin-bottom: .5rem;
+		font-size: 14px;
+		font-family: $font-family-sans-serif;
+		font-weight: normal;
+		color: $color-mineshaft
+	}
+	
+	//Input Text
+	&form-input{
+		display: block;
+		width: 100%;
+		padding: .375rem .75rem;
+		font-size: 14px;
+		font-family: $font-family-sans-serif;
+		font-weight: normal;
+		line-height: 1.5;
+		color: $color-mineshaft;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid $color-silver;
+		border-radius: 0;
+		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+	
+	
+	// Check
+	/*&form-check {
+		@extend .form-check;
+		position: relative;
+		padding: 10px 0 10px ($checklist-back-width-height + ($grid-gutter-width / 2)) ;
+		text-align: left;
+		
+		label {
+			font-size: 16px;
+			color:$color-mineshaft;
+			cursor: pointer;
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left:0;
+				margin:auto;
+			}
+			&:before {
+				width: $checklist-back-width-height;
+				height: $checklist-back-width-height;
+				background: $white;
+				border:1px solid $color-silver
+			}
+			
+			&:after {
+				left:1px;
+				@extend .font-icon;
+				content: unicode($icon-Check_Blue2);
+				font-size: $checklist-back-width-height - 2px;
+				color: $color-st-tropaz;
+				width: $checklist-back-width-height - 2px;
+				height: $checklist-back-width-height - 2px;
+				transition: all $transition-normal $transition-ease;
+				opacity: 0;
+			}
+		}
+		
+		input[type="radio"],
+		input[type="checkbox"] {
+			position: absolute;
+			top: 0;
+			left: -9999px;
+			visibility: hidden;
+			
+			&:checked + label {
+				&:before {
+				}
+				&:after {
+					opacity: 1;
+				}
+			}
+			
+			&:disabled + label {
+				color:$color-dusty-gray;
+				text-decoration: line-through;
+			}
+		}
+	}*/
+	
+	
+}
+
+

@@ -1,0 +1,61 @@
+/*********************************************************************
+	Login
+*********************************************************************/
+
+@include mq('phone') {
+	
+	
+	.#{$prefix} {
+		
+		&Login{
+			
+			background: #ffffff;
+			margin: $grid-gutter-width $grid-gutter-width / 2;
+			
+			.AxaXl-btn--primary{
+				width: 100%;
+				margin-top: $grid-gutter-width / 2;
+			}
+			
+			&__header-login{
+				font-size: 24px;
+				font-weight: $font-weight-bold;
+				font-family: $font-family-serif;
+				margin: 0 0 $grid-gutter-width 0;
+			}
+			
+			&__header-form-group{
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+			}
+			
+			&__forgot{
+				color:$color-mineshaft;
+				font-size: 14px;
+				margin-bottom: .5rem;
+				font-family: $font-family-sans-serif;
+				font-weight: $font-weight-normal;
+				text-decoration: none;
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+@include mq('tablet') {
+	
+	.#{$prefix} {
+		
+		&Login{
+			background:#FFF;
+			width: 440px;
+			margin: $grid-gutter-width auto;
+			box-shadow: 0 1px 10px 0 rgba(0,0,0,0.15);
+			padding: $grid-gutter-width ($grid-gutter-width * 1.5) ($grid-gutter-width * 1.5) ($grid-gutter-width * 1.5);
+		}
+	}
+}
