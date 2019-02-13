@@ -24,6 +24,7 @@ $HeaderBottom-height: 50px;
 			position: fixed;
 			top: 0;
 			width: 100%;
+			line-height: 1.15;
 			
 			
 			// Header Top
@@ -268,6 +269,7 @@ $HeaderBottom-height: 50px;
 				&:focus{
 					border-bottom:0;
 					text-decoration: none;
+					color: $color-axa-blue;
 				}
 			}
 			
@@ -316,6 +318,8 @@ $HeaderBottom-height: 50px;
 				&:hover,
 				&:focus{
 					background: $color-alabaster;
+					color: $color-axa-blue;
+					text-decoration: none;
 				}
 			}
 			
@@ -365,6 +369,8 @@ $HeaderBottom-height: 50px;
 				&:hover,
 				&--active {
 					border-bottom: 3px solid $color-burnt-sienna;
+					text-decoration: none;
+					color: $color-axa-blue;
 				}
 			}
 			
@@ -412,6 +418,7 @@ $HeaderBottom-height: 50px;
 				&:focus{
 					border-bottom:0;
 					text-decoration: none;
+					color:$color-axa-blue
 				}
 			}
 			
