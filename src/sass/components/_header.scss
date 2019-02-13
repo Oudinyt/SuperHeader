@@ -445,6 +445,10 @@ $HeaderBottom-height: 50px;
 				font-size: 13px;
 				display: flex;
 				justify-content: center;
+				align-items: baseline;
+				&:hover{
+					color:$color-dusty-gray;
+				}
 				
 				img {
 					margin-right: 5px;
