@@ -1,10 +1,11 @@
 /*********************************************************************
 	Headear
 *********************************************************************/
-// Var
 
+// Var
 $HeaderTop-height: 60px;
 $HeaderBottom-height: 50px;
+$HeaderZindex: 10000;
 
 /************************************************************************************************
 	Phone
@@ -25,7 +26,7 @@ $HeaderBottom-height: 50px;
 			top: 0;
 			width: 100%;
 			line-height: 1.15;
-			
+			z-index: $HeaderZindex;
 			
 			// Header Top
 			////////////////////////////////////////////////////////////////////s
@@ -213,6 +214,10 @@ $HeaderBottom-height: 50px;
 				display: block;
 				padding: 10px 15px;
 				position: relative;
+				&:hover{
+					color:$color-axa-blue;
+					text-decoration: none;
+				}
 			}
 			
 			&__MainNav-input:checked ~ &__MainNav-Nav {
@@ -384,7 +389,6 @@ $HeaderBottom-height: 50px;
 				opacity: 0;
 				transition: .3s;
 				background: white;
-				padding: 15px;
 				border-bottom: 1px solid $color-mercury;
 				width: 100%;
 				left: 0;
@@ -393,14 +397,14 @@ $HeaderBottom-height: 50px;
 			&__popover-lists {
 				list-style: none;
 				border:0;
-				margin: (-($grid-gutter-width / 2)) 0;
+				margin: 0;
 				padding: 0;
 			}
 			
 			&__popover-list{
 				list-style: none;
-				margin: 0 (-($grid-gutter-width / 2));
-				padding: ($grid-gutter-width / 2);
+				margin: 0 ;
+				padding: 0;
 				&:hover,
 				&:focus{
 					background: $color-alabaster;
@@ -414,6 +418,7 @@ $HeaderBottom-height: 50px;
 				cursor: pointer;
 				display: block;
 				border-bottom:0;
+				padding: $grid-gutter-width / 2;
 				&:hover,
 				&:focus{
 					border-bottom:0;
@@ -452,7 +457,8 @@ $HeaderBottom-height: 50px;
 				
 				img {
 					margin-right: 5px;
-					height:14px;
+					height:12px;
+					width:14px;
 				}
 			}
 			
