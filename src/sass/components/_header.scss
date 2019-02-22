@@ -311,7 +311,8 @@ $HeaderZindex: 10000;
 				flex: 1 1 auto;
 				position: relative;
 				height: 100%;
-				&:hover {
+				&:hover,
+				&--active{
 					.AxaXl-Header__popover-functional {
 						display: block;
 						opacity: 1;

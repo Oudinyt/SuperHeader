@@ -802,17 +802,17 @@ template {
     position: relative;
     height: 100%;
   }
-  /* line 315, src/sass/components/_header.scss */
-  .AxaXl-Header__Nav-Fuctionnal-list:hover .AxaXl-Header__popover-functional {
+  /* line 316, src/sass/components/_header.scss */
+  .AxaXl-Header__Nav-Fuctionnal-list:hover .AxaXl-Header__popover-functional, .AxaXl-Header__Nav-Fuctionnal-list--active .AxaXl-Header__popover-functional {
     display: block;
     opacity: 1;
   }
-  /* line 322, src/sass/components/_header.scss */
+  /* line 323, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-icon {
     position: relative;
     display: block;
   }
-  /* line 327, src/sass/components/_header.scss */
+  /* line 328, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-count {
     position: absolute;
     left: -10px;
@@ -838,7 +838,7 @@ template {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   }
-  /* line 346, src/sass/components/_header.scss */
+  /* line 347, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-link {
     text-decoration: none;
     font-size: 14px;
@@ -859,22 +859,22 @@ template {
             box-sizing: border-box;
     border-bottom: 3px solid white;
   }
-  /* line 358, src/sass/components/_header.scss */
+  /* line 359, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-link:hover, .AxaXl-Header__Nav-Fuctionnal-link--active {
     background: #fafafa;
     color: #00008f;
     border-bottom: 3px solid #f07662;
     text-decoration: none;
   }
-  /* line 367, src/sass/components/_header.scss */
+  /* line 368, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-text {
     display: none;
   }
-  /* line 371, src/sass/components/_header.scss */
+  /* line 372, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-imgArrow {
     display: none;
   }
-  /* line 378, src/sass/components/_header.scss */
+  /* line 379, src/sass/components/_header.scss */
   .AxaXl-Header__popover-functional {
     display: none;
     position: fixed;
@@ -888,24 +888,24 @@ template {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   }
-  /* line 390, src/sass/components/_header.scss */
+  /* line 391, src/sass/components/_header.scss */
   .AxaXl-Header__popover-lists {
     list-style: none;
     border: 0;
     margin: 0;
     padding: 0;
   }
-  /* line 397, src/sass/components/_header.scss */
+  /* line 398, src/sass/components/_header.scss */
   .AxaXl-Header__popover-list {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  /* line 401, src/sass/components/_header.scss */
+  /* line 402, src/sass/components/_header.scss */
   .AxaXl-Header__popover-list:hover, .AxaXl-Header__popover-list:focus {
     background: #fafafa;
   }
-  /* line 407, src/sass/components/_header.scss */
+  /* line 408, src/sass/components/_header.scss */
   .AxaXl-Header__popover-link {
     color: #00008f;
     font-size: 14px;
@@ -915,13 +915,13 @@ template {
     border-bottom: 0;
     padding: 15px;
   }
-  /* line 415, src/sass/components/_header.scss */
+  /* line 416, src/sass/components/_header.scss */
   .AxaXl-Header__popover-link:hover, .AxaXl-Header__popover-link:focus {
     border-bottom: 0;
     text-decoration: none;
     color: #00008f;
   }
-  /* line 426, src/sass/components/_header.scss */
+  /* line 427, src/sass/components/_header.scss */
   .AxaXl-Header__SubNav {
     position: relative;
     z-index: 1;
@@ -939,7 +939,7 @@ template {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  /* line 437, src/sass/components/_header.scss */
+  /* line 438, src/sass/components/_header.scss */
   .AxaXl-Header__Link-app {
     color: #999999;
     text-transform: uppercase;
@@ -957,17 +957,17 @@ template {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-  /* line 447, src/sass/components/_header.scss */
+  /* line 448, src/sass/components/_header.scss */
   .AxaXl-Header__Link-app:hover {
     color: #999999;
   }
-  /* line 451, src/sass/components/_header.scss */
+  /* line 452, src/sass/components/_header.scss */
   .AxaXl-Header__Link-app img {
     margin-right: 5px;
     height: 12px;
     width: 14px;
   }
-  /* line 458, src/sass/components/_header.scss */
+  /* line 459, src/sass/components/_header.scss */
   .AxaXl-Header__Env {
     font-family: "Source Sans Pro", Arial, sans-serif;
     color: #999999;
@@ -981,11 +981,11 @@ template {
 	Tablet
 ************************************************************************************************/
 @media only screen and (min-width: 768px) {
-  /* line 480, src/sass/components/_header.scss */
+  /* line 481, src/sass/components/_header.scss */
   body {
     padding-top: 102px;
   }
-  /* line 489, src/sass/components/_header.scss */
+  /* line 490, src/sass/components/_header.scss */
   .AxaXl-Header__top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -993,7 +993,7 @@ template {
     -ms-flex-wrap: unset;
         flex-wrap: unset;
   }
-  /* line 495, src/sass/components/_header.scss */
+  /* line 496, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Axa-content {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -1001,12 +1001,12 @@ template {
     -ms-flex-preferred-size: 50px;
         flex-basis: 50px;
   }
-  /* line 500, src/sass/components/_header.scss */
+  /* line 501, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Axa {
     padding: 15px 0 10px 15px;
     height: 65px;
   }
-  /* line 506, src/sass/components/_header.scss */
+  /* line 507, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Xl-content {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
@@ -1014,12 +1014,12 @@ template {
     -ms-flex-preferred-size: 170px;
         flex-basis: 170px;
   }
-  /* line 516, src/sass/components/_header.scss */
+  /* line 517, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Xl-img {
     border-left: 1px solid #cccccc;
     padding-left: 20px;
   }
-  /* line 522, src/sass/components/_header.scss */
+  /* line 523, src/sass/components/_header.scss */
   .AxaXl-Header__Nav {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -1039,7 +1039,7 @@ template {
         -ms-flex-align: center;
             align-items: center;
   }
-  /* line 532, src/sass/components/_header.scss */
+  /* line 533, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal {
     width: auto;
     height: 100%;
@@ -1047,7 +1047,7 @@ template {
         -ms-flex: none;
             flex: none;
   }
-  /* line 544, src/sass/components/_header.scss */
+  /* line 545, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
@@ -1062,7 +1062,7 @@ template {
         -ms-flex-align: center;
             align-items: center;
   }
-  /* line 552, src/sass/components/_header.scss */
+  /* line 553, src/sass/components/_header.scss */
   .AxaXl-Header__popover-functional {
     position: absolute;
     left: 0;
@@ -1071,22 +1071,22 @@ template {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   }
-  /* line 560, src/sass/components/_header.scss */
+  /* line 561, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-input, .AxaXl-Header__MainNav-label {
     display: none;
   }
-  /* line 565, src/sass/components/_header.scss */
+  /* line 566, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-Nav {
     margin-top: 65px;
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   }
-  /* line 577, src/sass/components/_header.scss */
+  /* line 578, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-list {
     margin-right: 0;
     margin-left: 0;
   }
-  /* line 582, src/sass/components/_header.scss */
+  /* line 583, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-link {
     text-decoration: none;
     font-size: 14px;
@@ -1100,17 +1100,17 @@ template {
     padding-right: 15px;
     padding-left: 15px;
   }
-  /* line 590, src/sass/components/_header.scss */
+  /* line 591, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-link:hover, .AxaXl-Header__Nav-Fuctionnal-link--active {
     border-bottom: 3px solid #fafafa;
   }
-  /* line 596, src/sass/components/_header.scss */
+  /* line 597, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-icon, .AxaXl-Header__Nav-Fuctionnal-imgArrow {
     max-height: -webkit-fit-content;
     max-height: -moz-fit-content;
     max-height: fit-content;
   }
-  /* line 603, src/sass/components/_header.scss */
+  /* line 604, src/sass/components/_header.scss */
   .AxaXl-Header__SubNav {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
@@ -1122,45 +1122,45 @@ template {
 	Desktop
 ************************************************************************************************/
 @media only screen and (min-width: 1248px) {
-  /* line 620, src/sass/components/_header.scss */
+  /* line 621, src/sass/components/_header.scss */
   body {
     padding-top: 0;
   }
-  /* line 626, src/sass/components/_header.scss */
+  /* line 627, src/sass/components/_header.scss */
   .AxaXl-Header {
     position: static;
   }
-  /* line 630, src/sass/components/_header.scss */
+  /* line 631, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Axa-content {
     -ms-flex-preferred-size: 70px;
         flex-basis: 70px;
   }
-  /* line 634, src/sass/components/_header.scss */
+  /* line 635, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Axa {
     height: auto;
     padding: 15px 0 15px 15px;
   }
-  /* line 637, src/sass/components/_header.scss */
+  /* line 638, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Axa img {
     height: auto;
   }
-  /* line 644, src/sass/components/_header.scss */
+  /* line 645, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Xl {
     height: auto;
   }
-  /* line 646, src/sass/components/_header.scss */
+  /* line 647, src/sass/components/_header.scss */
   .AxaXl-Header__Link-Xl img {
     height: auto;
   }
-  /* line 655, src/sass/components/_header.scss */
+  /* line 656, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav {
     height: 100%;
   }
-  /* line 659, src/sass/components/_header.scss */
+  /* line 660, src/sass/components/_header.scss */
   .AxaXl-Header .AxaXl-Header__MainNav-input + .AxaXl-Header__MainNav-label, .AxaXl-Header__MainNav-label {
     display: none;
   }
-  /* line 664, src/sass/components/_header.scss */
+  /* line 665, src/sass/components/_header.scss */
   .AxaXl-Header .AxaXl-Header__MainNav-input ~ .AxaXl-Header__MainNav-Nav, .AxaXl-Header__MainNav-Nav {
     display: block;
     position: static;
@@ -1175,7 +1175,7 @@ template {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  /* line 677, src/sass/components/_header.scss */
+  /* line 678, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-lists {
     margin: 0;
     padding: 0;
@@ -1190,7 +1190,7 @@ template {
             align-items: center;
     height: 100%;
   }
-  /* line 686, src/sass/components/_header.scss */
+  /* line 687, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-list {
     margin: 0;
     padding: 0;
@@ -1201,28 +1201,28 @@ template {
     overflow: hidden;
     height: 85px;
   }
-  /* line 695, src/sass/components/_header.scss */
+  /* line 696, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-list:hover, .AxaXl-Header__MainNav-list--active {
     background: none;
     overflow: visible;
   }
-  /* line 699, src/sass/components/_header.scss */
+  /* line 700, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-list:hover .AxaXl-Header__MainNav-link, .AxaXl-Header__MainNav-list--active .AxaXl-Header__MainNav-link {
     border-bottom: 3px solid #f07662;
     border-right: 0;
     background: none;
   }
-  /* line 704, src/sass/components/_header.scss */
+  /* line 705, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-list:hover .AxaXl-Header__MainNav-subnav, .AxaXl-Header__MainNav-list--active .AxaXl-Header__MainNav-subnav {
     display: block;
     opacity: 1;
     cursor: pointer;
   }
-  /* line 710, src/sass/components/_header.scss */
+  /* line 711, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-list:first-child {
     border-top: 0;
   }
-  /* line 715, src/sass/components/_header.scss */
+  /* line 716, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1244,7 +1244,7 @@ template {
     font-size: 14px;
     font-weight: 600;
   }
-  /* line 733, src/sass/components/_header.scss */
+  /* line 734, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-list {
     width: auto;
     -ms-flex-preferred-size: auto;
@@ -1252,36 +1252,36 @@ template {
     margin-left: 0px;
     margin-right: 0px;
   }
-  /* line 740, src/sass/components/_header.scss */
+  /* line 741, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-list--active .AxaXl-Header__Nav-Fuctionnal-link, .AxaXl-Header__Nav-Fuctionnal-list:hover .AxaXl-Header__Nav-Fuctionnal-link {
     border-bottom: 3px solid #fafafa;
   }
-  /* line 743, src/sass/components/_header.scss */
+  /* line 744, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-list--active .AxaXl-Header__Nav-Fuctionnal-imgArrow, .AxaXl-Header__Nav-Fuctionnal-list:hover .AxaXl-Header__Nav-Fuctionnal-imgArrow {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  /* line 749, src/sass/components/_header.scss */
+  /* line 750, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-link {
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* line 754, src/sass/components/_header.scss */
+  /* line 755, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 758, src/sass/components/_header.scss */
+  /* line 759, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-count {
     left: -10px;
   }
-  /* line 762, src/sass/components/_header.scss */
+  /* line 763, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-text {
     display: block;
     margin: 0 10px;
   }
-  /* line 767, src/sass/components/_header.scss */
+  /* line 768, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-imgArrow {
     display: block;
     margin-right: 0;
@@ -1290,11 +1290,11 @@ template {
     -webkit-transition: .3s;
     transition: .3s;
   }
-  /* line 774, src/sass/components/_header.scss */
+  /* line 775, src/sass/components/_header.scss */
   .AxaXl-Header__Nav-Fuctionnal-icon {
     margin-left: 0;
   }
-  /* line 778, src/sass/components/_header.scss */
+  /* line 779, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-subnav {
     position: absolute;
     left: 0;
@@ -1307,7 +1307,7 @@ template {
     -webkit-transition: .3s;
     transition: .3s;
   }
-  /* line 789, src/sass/components/_header.scss */
+  /* line 790, src/sass/components/_header.scss */
   .AxaXl-Header__MainNav-sublink {
     padding: 15px;
   }
@@ -1316,21 +1316,21 @@ template {
 /************************************************************************************************
 	All
 ************************************************************************************************/
-/* line 804, src/sass/components/_header.scss */
+/* line 805, src/sass/components/_header.scss */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
 
-/* line 812, src/sass/components/_header.scss */
+/* line 813, src/sass/components/_header.scss */
 .AxaXl-fixedTop {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-/* line 818, src/sass/components/_header.scss */
+/* line 819, src/sass/components/_header.scss */
 .AxaXl-headertopHidden {
   height: 0;
   overflow: hidden;
