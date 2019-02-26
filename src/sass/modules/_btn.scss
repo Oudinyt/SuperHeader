@@ -11,6 +11,9 @@
 		white-space: nowrap;
 		vertical-align: middle;
 		user-select: none;
+		border-left: 0;
+		border-right: 0;
+		border-top: 0;
 		border-bottom: 2px solid transparent;
 		padding: .5rem .75rem;
 		font-size: 1rem;
@@ -22,6 +25,7 @@
 		font-family: $font-family-sans-serif;
 		font-weight: $font-weight-semi-bold;
 		letter-spacing: 1px;
+		cursor: pointer;
 	}
 	
 	&btn--primary{

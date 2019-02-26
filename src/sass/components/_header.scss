@@ -44,7 +44,6 @@ $HeaderZindex: 10000;
 			&__Link-Axa-content {
 				order: 1;
 				transition: all 0.3s ease;
-				flex-basis: 50%;
 				position: relative;
 			}
 			
@@ -67,12 +66,12 @@ $HeaderZindex: 10000;
 			
 			&__Link-Xl-content {
 				order: 2;
-				flex-basis: 50%;
 				display: flex;
 				align-items: center;
 				justify-content: flex-end;
 				position: relative;
 				z-index: 1;
+				margin-left: auto;
 			}
 			
 			
@@ -83,6 +82,7 @@ $HeaderZindex: 10000;
 				padding: 15px 15px 15px 0;
 				transition: all 0.3s ease;
 				height: $HeaderTop-height;
+				text-decoration: none;
 			}
 			
 			&__Link-Xl-img {
@@ -113,6 +113,7 @@ $HeaderZindex: 10000;
 			
 			&__MainNav-Nav {
 				margin-top: ($HeaderTop-height + $HeaderBottom-height);
+
 			}
 			
 			&__MainNav-lists {
@@ -181,8 +182,9 @@ $HeaderZindex: 10000;
 				height: 0px;
 				transition: opacity .3s;
 				transition-delay: .3s;
-				overflow: hidden;
+				overflow-y: scroll;
 				z-index: 0;
+				
 			}
 
 			&__MainNav-list {
@@ -208,7 +210,7 @@ $HeaderZindex: 10000;
 				text-decoration: none;
 				text-transform: uppercase;
 				color: $color-axa-blue;
-				font-weight: 400;
+				font-weight: 600;
 				font-size: 14px;
 				font-family: sans-serif;
 				display: block;
@@ -269,7 +271,7 @@ $HeaderZindex: 10000;
 				cursor: pointer;
 				display: block;
 				border-bottom:0;
-				padding: 10px ($grid-gutter-width / 2);
+				padding: 10px 20px;
 				&:hover,
 				&:focus{
 					border-bottom:0;
@@ -288,8 +290,9 @@ $HeaderZindex: 10000;
 				justify-content: center;
 				align-items: center;
 				height: $HeaderBottom-height;
-				width: 100%;
+				width: auto;
 				margin-left: auto;
+				flex: auto;
 			}
 			
 			&__Nav-Fuctionnal-lists {
@@ -307,27 +310,16 @@ $HeaderZindex: 10000;
 				list-style: none;
 				flex: 1 1 auto;
 				position: relative;
-				&:hover {
+				height: 100%;
+				&:hover,
+				&--active{
 					.AxaXl-Header__popover-functional {
 						display: block;
 						opacity: 1;
 					}
 				}
 			}
-			
-			&__Nav-Fuctionnal-link{
-				text-decoration: none;
-				font-size: 14px;
-				color: $color-axa-blue;
-				font-weight: $font-weight-semi-bold;
-				&:hover,
-				&:focus{
-					background: $color-alabaster;
-					color: $color-axa-blue;
-					text-decoration: none;
-				}
-			}
-			
+
 			&__Nav-Fuctionnal-icon {
 				position: relative;
 				display: block;
@@ -351,19 +343,12 @@ $HeaderZindex: 10000;
 				align-items: center;
 				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
 			}
-			
-			&__Nav-Fuctionnal-text {
-				display: none;
-			}
-			
-			&__Nav-Fuctionnal-imgArrow {
-				display: none;
-			}
-			
+
 			&__Nav-Fuctionnal-link {
 				text-decoration: none;
 				font-size: 14px;
 				color: $color-axa-blue;
+				font-weight: $font-weight-semi-bold;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -373,12 +358,20 @@ $HeaderZindex: 10000;
 				border-bottom: 3px solid white;
 				&:hover,
 				&--active {
+					background: $color-alabaster;
+					color: $color-axa-blue;
 					border-bottom: 3px solid $color-burnt-sienna;
 					text-decoration: none;
-					color: $color-axa-blue;
 				}
 			}
+
+			&__Nav-Fuctionnal-text {
+				display: none;
+			}
 			
+			&__Nav-Fuctionnal-imgArrow {
+				display: none;
+			}
 			
 			// popover functional
 			////////////////////////////////////////////////////////////////////
@@ -392,6 +385,7 @@ $HeaderZindex: 10000;
 				border-bottom: 1px solid $color-mercury;
 				width: 100%;
 				left: 0;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 			}
 			
 			&__popover-lists {
@@ -529,8 +523,9 @@ $HeaderZindex: 10000;
 			&__Nav {
 				order: 2;
 				display: flex;
-				width: calc(100% - 220px);
-				flex-basis: calc(100% - 220px);
+				//width: calc(100% - 550px);
+				flex-basis: auto;
+				flex : 1 1 auto;
 				justify-content: space-between;
 				align-items: center;
 			}
@@ -538,15 +533,29 @@ $HeaderZindex: 10000;
 			&__Nav-Fuctionnal {
 				width: auto;
 				height: 100%;
+				flex: none;
+				
 			}
 			
 			// Main nav
+			
+			&__MainNav-input:checked ~ &__MainNav-Nav {
+				//height: auto;
+			}
 			&__MainNav {
 				flex-basis: auto;
 				margin-left: 15px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+			}
+			
+			&__popover-functional {
+				position: absolute;
+				left: 0;
+				bottom: auto;
+				min-width: 150px;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 			}
 			
 			&__MainNav-input,
@@ -556,6 +565,7 @@ $HeaderZindex: 10000;
 			
 			&__MainNav-Nav {
 				margin-top: $HeaderTop-height;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 			}
 			
 			// Nav functionnal
@@ -580,7 +590,7 @@ $HeaderZindex: 10000;
 				padding-left: 15px;
 				&:hover,
 				&--active {
-					border-bottom: 3px solid white;
+					border-bottom: 3px solid #fafafa;
 				}
 			}
 			
@@ -618,12 +628,15 @@ $HeaderZindex: 10000;
 			position: static;
 			// Logo AXA
 			////////////////////////////////////////////////////////////////////////////////////
+			&__Link-Axa-content {
+				flex-basis: 70px;
+			}
+			
 			&__Link-Axa {
 				height: auto;
 				padding: 15px 0 15px 15px;
 				img {
 					height: auto;
-					
 				}
 			}
 			
@@ -659,6 +672,7 @@ $HeaderZindex: 10000;
 				transition: none;
 				transition-delay: 0;
 				height: 100%;
+				box-shadow: none;
 			}
 			
 			&__MainNav-lists {
@@ -678,6 +692,7 @@ $HeaderZindex: 10000;
 				border: 0 none;
 				height: 100%;
 				overflow: hidden;
+				height: 85px;
 				&:hover,
 				&--active {
 					background: none;
@@ -716,7 +731,6 @@ $HeaderZindex: 10000;
 			
 			// Functional Nav
 			////////////////////////////////////////////////////////////////////////////////////
-			
 			&__Nav-Fuctionnal-list {
 				width: auto;
 				flex-basis: auto;
@@ -726,6 +740,9 @@ $HeaderZindex: 10000;
 				&:hover {
 					.AxaXl-Header__Nav-Fuctionnal-link {
 						border-bottom: 3px solid $color-alabaster;
+					}
+					.AxaXl-Header__Nav-Fuctionnal-imgArrow {
+						transform: rotate(0deg);
 					}
 				}
 			}
@@ -751,18 +768,12 @@ $HeaderZindex: 10000;
 			&__Nav-Fuctionnal-imgArrow {
 				display: block;
 				margin-right: 0;
+				transform: rotate(180deg);
+				transition: .3s;
 			}
 			
 			&__Nav-Fuctionnal-icon {
 				margin-left: 0;
-			}
-			
-			&__popover-functional {
-				position: absolute;
-				left: 0;
-				bottom: auto;
-				min-width: 150px;
-				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 			}
 			
 			&__MainNav-subnav {

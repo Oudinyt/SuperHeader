@@ -464,6 +464,9 @@ template {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   border-bottom: 2px solid transparent;
   padding: .5rem .75rem;
   font-size: 1rem;
@@ -478,16 +481,17 @@ template {
   font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
-/* line 27, src/sass/modules/_btn.scss */
+/* line 31, src/sass/modules/_btn.scss */
 .AxaXl-btn--primary {
   color: #fff;
   background-color: #f07662;
   border-color: #ec4d33;
 }
 
-/* line 31, src/sass/modules/_btn.scss */
+/* line 35, src/sass/modules/_btn.scss */
 .AxaXl-btn--primary:hover {
   background: #ec4d33;
 }
