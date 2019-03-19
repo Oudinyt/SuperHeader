@@ -1,0 +1,835 @@
+/*********************************************************************
+	Headear
+*********************************************************************/
+
+// Var
+$HeaderTop-height: 60px;
+$HeaderBottom-height: 50px;
+$HeaderZindex: 10000;
+
+/************************************************************************************************
+	Phone
+************************************************************************************************/
+
+@include mq('phone') {
+	
+	body {
+		padding-top: ($HeaderTop-height + $HeaderBottom-height + 40px);
+	}
+	
+	.#{$prefix} {
+		
+		&Header {
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			line-height: 1.15;
+			z-index: $HeaderZindex;
+			
+			// Header Top
+			////////////////////////////////////////////////////////////////////s
+			&__top {
+				display: flex;
+				flex-wrap: wrap;
+				background: $color-white;
+				font-family: $font-family-sans-serif;
+				transition: all 0.3s ease;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+				position: relative;
+				z-index: 2;
+			}
+			
+			&__Link-Axa-content {
+				order: 1;
+				transition: all 0.3s ease;
+				position: relative;
+			}
+			
+			
+			// Logo AXA
+			////////////////////////////////////////////////////////////////////s
+			&__Link-Axa {
+				box-sizing: border-box;
+				display: flex;
+				padding: 15px 0 10px 15px;
+				font-size: 0;
+				z-index: 1;
+				height: $HeaderTop-height;
+			}
+			
+			&__Link-Axa-img {
+				height: 35px;
+				border: 0;
+			}
+			
+			&__Link-Xl-content {
+				order: 2;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				position: relative;
+				z-index: 1;
+				margin-left: auto;
+			}
+			
+			
+			// Logo xl group
+			////////////////////////////////////////////////////////////////////s
+			&__Link-Xl {
+				box-sizing: border-box;
+				padding: 15px 15px 15px 0;
+				transition: all 0.3s ease;
+				height: $HeaderTop-height;
+				text-decoration: none;
+			}
+			
+			&__Link-Xl-img {
+				border: 0;
+			}
+			
+			&__Nav {
+				order: 3;
+				display: flex;
+				flex-basis: 100%;
+				background: $color-white;
+			}
+			
+			
+			// Main nav
+			////////////////////////////////////////////////////////////////////s
+			
+			&__MainNav {
+				flex-basis: 65px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			&__MainNav-input {
+				display: none;
+			}
+			
+			&__MainNav-Nav {
+				margin-top: ($HeaderTop-height + $HeaderBottom-height);
+
+			}
+			
+			&__MainNav-lists {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			&__MainNav-list {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			&__MainNav-label {
+				position: relative;
+				display: block;
+				height: 20px;
+				width: 20px;
+				z-index: 5;
+				cursor: pointer;
+				span {
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					top: 50%;
+					margin-top: -1px;
+					left: 0;
+					display: block;
+					background: $color-axa-blue;
+					transition: .3s;
+				}
+				span:first-child {
+					top: 2px;
+				}
+				span:last-child {
+					top: 18px;
+				}
+			}
+			
+			&__MainNav-label:hover {
+				cursor: pointer;
+			}
+			
+			&__MainNav-labelClose {
+				display: none;
+				span {
+					opacity: 0;
+					top: 50%;
+				}
+				span:first-child {
+					opacity: 1;
+					transform: rotate(405deg);
+				}
+				span:last-child {
+					opacity: 1;
+					transform: rotate(-405deg);
+				}
+			}
+			
+			&__MainNav-input ~ &__MainNav-Nav {
+				background: white;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 0px;
+				transition: opacity .3s;
+				transition-delay: .3s;
+				overflow-y: scroll;
+				z-index: 0;
+				
+			}
+
+			&__MainNav-list {
+				opacity: 0;
+				transition: opacity .3s;
+				transition-delay: 0s;
+				border-bottom: 1px solid $color-mercury;
+				position: relative;
+				&:hover,
+				&--active {
+					background: $color-alabaster;
+					.#{$prefix}Header__MainNav-link {
+						border-right: 3px solid $color-burnt-sienna;
+					}
+				
+				}
+				&:first-child {
+					border-top: 1px solid $color-mercury;
+				}
+				
+			}
+			
+			&__MainNav-link {
+				text-decoration: none;
+				text-transform: uppercase;
+				color: $color-axa-blue;
+				font-weight: 600;
+				font-size: 14px;
+				font-family: $font-family-sans-serif;
+				display: block;
+				padding: 10px 15px;
+				position: relative;
+				&:hover{
+					color:$color-axa-blue;
+					text-decoration: none;
+				}
+			}
+			
+			&__MainNav-input:checked ~ &__MainNav-Nav {
+				height: 100%;
+				transition-delay: 0s;
+				> ul {
+					> li {
+						opacity: 1;
+						transition-delay: .3s;
+					}
+				}
+			}
+			
+			
+			// MainNav sublists
+			////////////////////////////////////////////////////////////////////
+			
+			&__MainNav-subnav {
+				background: white;
+				padding: 0px;
+				width: 100%;
+			}
+			
+			&__MainNav-sublists {
+				list-style: none;
+				border:0;
+				//margin: (-($grid-gutter-width / 2)) 0;
+				padding: 0;
+				margin: 0;
+			}
+			
+			&__MainNav-sublist {
+				list-style: none;
+				//margin: 0 (-($grid-gutter-width / 2));
+				margin: 0;
+				padding: 0;
+				//padding: 10px ($grid-gutter-width / 2);
+				//border-top: 1px solid $color-mercury;
+				&:hover,
+				&:focus{
+					background: $color-alabaster;
+				}
+			}
+			
+			&__MainNav-sublink {
+				color: $color-axa-blue;
+				font-size: 14px;
+				text-decoration: none;
+				cursor: pointer;
+				display: block;
+				border-bottom:0;
+				padding: 10px 20px;
+				&:hover,
+				&:focus{
+					border-bottom:0;
+					text-decoration: none;
+					color: $color-axa-blue;
+				}
+			}
+			
+			
+			// Nav functionnal
+			////////////////////////////////////////////////////////////////////
+			
+			&__Nav-Fuctionnal {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: $HeaderBottom-height;
+				width: auto;
+				margin-left: auto;
+				flex: auto;
+			}
+			
+			&__Nav-Fuctionnal-lists {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				height: 100%;
+			}
+			
+			&__Nav-Fuctionnal-list {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				flex: 1 1 auto;
+				position: relative;
+				height: 100%;
+				&:hover,
+				&--active{
+					.AxaXl-Header__popover-functional {
+						display: block;
+						opacity: 1;
+					}
+				}
+			}
+
+			&__Nav-Fuctionnal-icon {
+				position: relative;
+				display: block;
+			}
+			
+			&__Nav-Fuctionnal-count {
+				position: absolute;
+				left: -10px;
+				top: -10px;
+				width: 16px;
+				height: 16px;
+				background: red;
+				border: 2px solid white;
+				font-size: 12px;
+				line-height: 12px;
+				color: white;
+				font-weight: bold;
+				border-radius: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+			}
+
+			&__Nav-Fuctionnal-link {
+				text-decoration: none;
+				font-size: 14px;
+				color: $color-axa-blue;
+				font-weight: $font-weight-semi-bold;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				box-sizing: border-box;
+				border-bottom: 3px solid white;
+				&:hover,
+				&--active {
+					background: $color-alabaster;
+					color: $color-axa-blue;
+					border-bottom: 3px solid $color-burnt-sienna;
+					text-decoration: none;
+				}
+			}
+
+			&__Nav-Fuctionnal-text {
+				display: none;
+			}
+			
+			&__Nav-Fuctionnal-imgArrow {
+				display: none;
+			}
+			
+			// popover functional
+			////////////////////////////////////////////////////////////////////
+			
+			&__popover-functional {
+				display: none;
+				position: fixed;
+				opacity: 0;
+				transition: .3s;
+				background: white;
+				border-bottom: 1px solid $color-mercury;
+				width: 100%;
+				left: 0;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+			}
+			
+			&__popover-lists {
+				list-style: none;
+				border:0;
+				margin: 0;
+				padding: 0;
+			}
+			
+			&__popover-list{
+				list-style: none;
+				margin: 0 ;
+				padding: 0;
+				&:hover,
+				&:focus{
+					background: $color-alabaster;
+				}
+			}
+			
+			&__popover-link{
+				color:$color-axa-blue;
+				font-size: 14px;
+				text-decoration: none;
+				cursor: pointer;
+				display: block;
+				border-bottom:0;
+				padding: $grid-gutter-width / 2;
+				&:hover,
+				&:focus{
+					border-bottom:0;
+					text-decoration: none;
+					color:$color-axa-blue
+				}
+			}
+			
+			// Sub nav
+			////////////////////////////////////////////////////////////////////////////////
+			
+			&__SubNav {
+				position: relative;
+				z-index: 1;
+				background: $color-alabaster;
+				order: 5;
+				flex-basis: 100%;
+				padding: 10px 15px;
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			&__Link-app {
+				color: $color-dusty-gray;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: $font-weight-semi-bold;
+				font-family: $font-family-sans-serif;
+				font-size: 13px;
+				display: flex;
+				justify-content: center;
+				align-items: baseline;
+				&:hover{
+					color:$color-dusty-gray;
+				}
+				
+				img {
+					margin-right: 5px;
+					height:12px;
+					width:14px;
+				}
+			}
+			
+			&__Env {
+				font-family: $font-family-sans-serif;
+				color: $color-dusty-gray;
+				text-transform: uppercase;
+				font-weight: $font-weight-semi-bold;
+				font-size: 13px;
+				
+			}
+			
+		}
+	}
+}
+
+/************************************************************************************************
+	Tablet
+************************************************************************************************/
+
+@include mq('tablet') {
+	
+	$HeaderTop-height: 65px;
+	$HeaderBottom-height: 50px;
+	
+	body {
+		padding-top: ($HeaderTop-height + 37px);
+	}
+	
+	.#{$prefix} {
+		
+		&Header {
+			
+			// Header top
+			&__top {
+				display: flex;
+				flex-wrap: unset;
+			}
+			
+			// Logo AXA
+			&__Link-Axa-content {
+				order: 1;
+				flex-basis: 50px;
+			}
+			
+			&__Link-Axa {
+				padding: 15px 0 10px 15px;
+				height: $HeaderTop-height;
+			}
+			
+			// Logo xl group
+			&__Link-Xl-content {
+				order: 3;
+				flex-basis: 170px;
+			}
+			
+			&__Link-Xl {
+			
+			}
+			
+			// Logo Xl
+			&__Link-Xl-img {
+				border-left: 1px solid $color-silver;
+				padding-left: 20px;
+			}
+			
+			// Nav
+			&__Nav {
+				order: 2;
+				display: flex;
+				//width: calc(100% - 550px);
+				flex-basis: auto;
+				flex : 1 1 auto;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			&__Nav-Fuctionnal {
+				width: auto;
+				height: 100%;
+				flex: none;
+				
+			}
+			
+			// Main nav
+			
+			&__MainNav-input:checked ~ &__MainNav-Nav {
+				//height: auto;
+			}
+			&__MainNav {
+				flex-basis: auto;
+				margin-left: 15px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			&__popover-functional {
+				position: absolute;
+				left: 0;
+				bottom: auto;
+				min-width: 150px;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+			}
+			
+			//&__MainNav-input,
+			//&__MainNav-label {
+			//	display: none;
+			//}
+			
+			&__MainNav-Nav {
+				margin-top: $HeaderTop-height;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+			}
+			
+			// Nav functionnal
+			////////////////////////////////////////////////////////////
+			
+			&__Nav-Fuctionnal {}
+			
+			&__Nav-Fuctionnal-lists {}
+			
+			&__Nav-Fuctionnal-list {
+				margin-right: 0;
+				margin-left: 0;
+			}
+			
+			&__Nav-Fuctionnal-link {
+				text-decoration: none;
+				font-size: 14px;
+				color: $color-axa-blue;
+				display: flex;
+				align-items: center;
+				padding-right: 15px;
+				padding-left: 15px;
+				&:hover,
+				&--active {
+					border-bottom: 3px solid #fafafa;
+				}
+			}
+			
+			&__Nav-Fuctionnal-icon,
+			&__Nav-Fuctionnal-imgArrow {
+				max-height: fit-content;
+			}
+			
+			// Sub nav
+			////////////////////////////////////////////////////////////
+			&__SubNav {
+				order: 5;
+			}
+			
+		}
+	}
+}
+
+/************************************************************************************************
+	Desktop
+************************************************************************************************/
+
+@include mq('desktop') {
+	
+	$HeaderTop-height: auto;
+	$HeaderBottom-height: auto;
+	
+	body {
+		padding-top: 0;
+	}
+	
+	.#{$prefix} {
+		
+		&Header {
+			position: static;
+			// Logo AXA
+			////////////////////////////////////////////////////////////////////////////////////
+			&__Link-Axa-content {
+				flex-basis: 70px;
+			}
+			
+			&__Link-Axa {
+				height: auto;
+				padding: 15px 0 15px 15px;
+				img {
+					height: auto;
+				}
+			}
+			
+			// Logo Xl
+			////////////////////////////////////////////////////////////////////////////////////
+			&__Link-Xl {
+				height: auto;
+				img {
+					height: auto;
+					
+				}
+			}
+			
+			// Main Nav
+			////////////////////////////////////////////////////////////////////////////////////
+
+			&__MainNav {
+				height: 100%;
+			}
+
+			&__MainNav-input + &__MainNav-label,
+			&__MainNav-label {
+				display: none;
+			}
+
+			&__MainNav-input ~ &__MainNav-Nav,
+			&__MainNav-Nav {
+				display: block;
+				position: static;
+				overflow: visible;
+				z-index: 1000;
+				margin-top: 0;
+				transition: none;
+				transition-delay: 0s;
+				height: 100%;
+				box-shadow: none;
+			}
+			
+			&__MainNav-list {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				opacity: 1;
+				border: 0 none;
+				overflow: hidden;
+			}
+			
+			&__Nav-left{
+				height: 100%;
+				width: 240px;
+				//border-right:1px solid $color-alabaster;
+				background: white;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+				
+				.AxaXl-Header__MainNav{
+					margin: 0;
+					padding: 0;
+					width: 100%;
+				}
+				
+				.AxaXl-Header__MainNav-lists{
+					width: 100%;
+				}
+				
+				.AxaXl-Header__MainNav-list{
+					width: 100%;
+				}
+				
+				.AxaXl-Header__MainNav-list:first-child{
+					border: 0;
+				}
+				
+				.AxaXl-Header__MainNav-link{
+					width: 100%;
+					font-family: $font-family-sans-serif;
+				}
+				
+				.AxaXl-Header__MainNav-subnav{
+					position: static;
+					box-shadow: none;
+					opacity: 1;
+					display: none;
+				}
+				
+				.AxaXl-Header__MainNav-sublink{
+					font-weight: normal;
+					font-size: 12px;
+					font-family: $font-family-sans-serif;
+				}
+				
+			}
+			
+
+			
+			// Functional Nav
+			////////////////////////////////////////////////////////////////////////////////////
+			&__Nav-Fuctionnal-list {
+				width: auto;
+				flex-basis: auto;
+				margin-left: 0px;
+				margin-right: 0px;
+				&--active,
+				&:hover {
+					.AxaXl-Header__Nav-Fuctionnal-link {
+						border-bottom: 3px solid $color-alabaster;
+					}
+					.AxaXl-Header__Nav-Fuctionnal-imgArrow {
+						transform: rotate(0deg);
+					}
+				}
+			}
+			
+			&__Nav-Fuctionnal-link{
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			&__Nav-Fuctionnal-icon {
+				display: flex;
+			}
+			
+			&__Nav-Fuctionnal-count {
+				left: -10px;
+			}
+			
+			&__Nav-Fuctionnal-text {
+				display: block;
+				margin: 0 10px;
+			}
+			
+			&__Nav-Fuctionnal-imgArrow {
+				display: block;
+				margin-right: 0;
+				transform: rotate(180deg);
+				transition: .3s;
+			}
+			
+			&__Nav-Fuctionnal-icon {
+				margin-left: 0;
+			}
+			
+			&__MainNav-subnav {
+				position: absolute;
+				left: 0;
+				bottom: auto;
+				min-width: 150px;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+				padding: 0;
+				opacity: 0;
+				transition: .3s;
+			}
+			
+			&__MainNav-sublink{
+				padding: ($grid-gutter-width / 2);
+			}
+			
+		}
+		
+	}
+	
+}
+
+/************************************************************************************************
+	All
+************************************************************************************************/
+
+html {
+	height: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	height: 100%;
+}
+
+.#{$prefix} {
+	
+	&fixedTop {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+	
+	&headertopHidden {
+		height: 0;
+		overflow: hidden;
+		padding: 0;
+		margin: 0;
+		
+	}
+	
+}
