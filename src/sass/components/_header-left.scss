@@ -274,6 +274,7 @@ $HeaderZindex: 10000;
 				display: block;
 				border-bottom:0;
 				padding: 10px 20px;
+				font-family: $font-family-sans-serif;
 				&:hover,
 				&:focus{
 					border-bottom:0;
@@ -689,9 +690,13 @@ $HeaderZindex: 10000;
 			&__Nav-left{
 				height: 100%;
 				width: 240px;
+				flex-basis: 240px;
 				//border-right:1px solid $color-alabaster;
 				background: white;
 				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+				order: 1;
+				flex: 0 0 auto;
+				
 				
 				.AxaXl-Header__MainNav{
 					margin: 0;
@@ -705,6 +710,7 @@ $HeaderZindex: 10000;
 				
 				.AxaXl-Header__MainNav-list{
 					width: 100%;
+					cursor: pointer;
 				}
 				
 				.AxaXl-Header__MainNav-list:first-child{
@@ -797,7 +803,19 @@ $HeaderZindex: 10000;
 			
 		}
 		
+		&container{
+			display: flex;
+			height: 100%    ;
+		}
+		
+		&main{
+			order: 1;
+			flex: 1 1 auto;
+		}
+		
 	}
+	
+	
 	
 }
 
