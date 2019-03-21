@@ -321,10 +321,14 @@ $HeaderZindex: 900;
 				//margin: 0 (-($grid-gutter-width / 2));
 				margin: 0;
 				padding: 0;
+				border-top: 1px solid $color-wild-sand;
 				//padding: 10px ($grid-gutter-width / 2);
 				//border-top: 1px solid $color-mercury;
 				&:hover{
 					background: $color-alabaster;
+				}
+				&:first-child{
+					border-top: 0;
 				}
 			}
 			
@@ -756,6 +760,8 @@ $HeaderZindex: 900;
 				order: inherit;
 				flex: 0 0 auto;
 				z-index: $HeaderZindex - 5;
+				min-height: 100%;
+				height: auto;
 				
 				
 				.AxaXl-Header__MainNav{
@@ -781,10 +787,6 @@ $HeaderZindex: 900;
 					
 				}
 				
-				.AxaXl-Header__MainNav-list:first-child{
-					border: 0;
-				}
-				
 				.AxaXl-Header__MainNav-link{
 					width: 100%;
 					font-family: $font-family-sans-serif;
@@ -797,6 +799,11 @@ $HeaderZindex: 900;
 					font-weight: normal;
 					font-size: 12px;
 					font-family: $font-family-sans-serif;
+				}
+				
+				
+				.AxaXl-Header__MainNav-subnav{
+					border-bottom: 1px solid $color-mercury;
 				}
 				
 			}
@@ -869,7 +876,6 @@ $HeaderZindex: 900;
 		
 		&container{
 			display: flex;
-			height: 100%    ;
 		}
 		
 		&main{
