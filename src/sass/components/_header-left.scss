@@ -32,7 +32,7 @@ $HeaderZindex: 900;
 			top: 0;
 			width: 100%;
 			line-height: 1.15;
-			z-index: $HeaderZindex;
+			z-index: $HeaderZindex + 50;
 			
 			// Header Top
 			////////////////////////////////////////////////////////////////////
@@ -190,7 +190,7 @@ $HeaderZindex: 900;
 				transition: opacity .3s;
 				transition-delay: .3s;
 				overflow-y: scroll;
-				z-index: 0;
+				z-index: $HeaderZindex;
 				
 			}
 
@@ -452,6 +452,7 @@ $HeaderZindex: 900;
 				background: white;
 				border-bottom: 1px solid $color-mercury;
 				width: 100%;
+				z-index: $HeaderZindex + 10;
 				left: 0;
 				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 			}
