@@ -21,8 +21,8 @@ $HeaderZindex: 900;
 		
 		// container
 		////////////////////////////////////////////////////////////////////s
-		&container{
-			min-height: 100%;
+		&main{
+			min-height: calc(100vh - (#{$HeaderTop-height} + #{$HeaderBottom-height} + 40px));
 		}
 		
 		&Header {
@@ -42,7 +42,7 @@ $HeaderZindex: 900;
 				background: $color-white;
 				font-family: $font-family-sans-serif;
 				transition: all 0.3s ease;
-				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+				box-shadow: none;
 				position: relative;
 				z-index: $HeaderZindex;
 			}
@@ -118,7 +118,7 @@ $HeaderZindex: 900;
 			}
 			
 			&__MainNav-Nav {
-				margin-top: ($HeaderTop-height + $HeaderBottom-height);
+				margin-top: ($HeaderTop-height + $HeaderBottom-height + 35px);
 
 			}
 			
@@ -231,7 +231,7 @@ $HeaderZindex: 900;
 			}
 			
 			&__MainNav-input:checked ~ &__MainNav-Nav {
-				height: 100%;
+				height: calc(100% - 145px);
 				transition-delay: 0s;
 				> ul {
 					> li {
@@ -492,7 +492,7 @@ $HeaderZindex: 900;
 			
 			&__SubNav {
 				position: relative;
-				z-index: $HeaderZindex;
+				z-index: 800;
 				background: $color-alabaster;
 				order: 5;
 				flex-basis: 100%;
@@ -550,6 +550,11 @@ $HeaderZindex: 900;
 	
 	.#{$prefix} {
 		
+		&main{
+			min-height: calc(100vh - (#{$HeaderTop-height}  + 35px));
+		}
+		
+		
 		&Header {
 			
 			// Header top
@@ -606,7 +611,7 @@ $HeaderZindex: 900;
 			// Main nav
 			
 			&__MainNav-input:checked ~ &__MainNav-Nav {
-				//height: auto;
+				height: calc(100vh - (#{$HeaderTop-height}  + 35px));
 			}
 			&__MainNav {
 				flex-basis: auto;
@@ -630,7 +635,7 @@ $HeaderZindex: 900;
 			//}
 			
 			&__MainNav-Nav {
-				margin-top: $HeaderTop-height;
+				margin-top: $HeaderTop-height  + 35px;
 				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 			}
 			
@@ -683,6 +688,8 @@ $HeaderZindex: 900;
 	
 	$HeaderTop-height: auto;
 	$HeaderBottom-height: auto;
+	$headerHeightDesktop: 120px;
+
 	
 	body {
 		padding-top: 0;
@@ -691,7 +698,8 @@ $HeaderZindex: 900;
 	.#{$prefix} {
 		
 		&Header {
-			position: static;
+			position: relative;
+			height: $headerHeightDesktop;
 			// Logo AXA
 			////////////////////////////////////////////////////////////////////////////////////
 			&__Link-Axa-content {
@@ -752,7 +760,6 @@ $HeaderZindex: 900;
 			
 			// Left nav
 			&__Nav-left{
-				height: 100%;
 				width: 240px;
 				flex-basis: 240px;
 				background: white;
@@ -760,8 +767,7 @@ $HeaderZindex: 900;
 				order: inherit;
 				flex: 0 0 auto;
 				z-index: $HeaderZindex - 5;
-				min-height: 100%;
-				height: auto;
+
 				
 				
 				.AxaXl-Header__MainNav{
@@ -874,13 +880,21 @@ $HeaderZindex: 900;
 			
 		}
 		
+		
+		
 		&container{
 			display: flex;
+			min-height: calc(100vh - #{$headerHeightDesktop});
+		}
+		
+		.AxaXl-Header__Nav-left{
+			min-height: calc(100vh - #{$headerHeightDesktop});
 		}
 		
 		&main{
 			order: inherit;
 			flex: 1 1 auto;
+			min-height: calc(100vh - #{$headerHeightDesktop});
 		}
 		
 	}
